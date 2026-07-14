@@ -86,21 +86,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 	           	fprintf(fout, "      \"mfence              \\n\" \n");
-	           	fprintf(fout, "      \"movq %%%rcx, (%%%rcx)       \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, (%%%%rcx)       \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 64(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 64(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 448(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 448(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 256(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 256(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 384(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 384(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 320(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 320(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 192(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 192(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 128(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 128(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
 	           	if (if_last){
 	           		fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -122,21 +122,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 			    fprintf(fout, "      \"rdtsc               \\n\" \n");
 			    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, (%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, (%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 64(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 64(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 448(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 448(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 256(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 256(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 384(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 384(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 320(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 320(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 192(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 192(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 128(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 128(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\"\n");
 	           	fprintf(fout, "      \"rdtsc               \\n\" \n");
 	            fprintf(fout, "      \"subl %%%%esi, %%%%eax         \\n\" \n");
@@ -155,21 +155,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 					fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq (%%%rcx),  %%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq (%%%%rcx),  %%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 64(%%%rcx), %%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 64(%%%%rcx), %%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 448(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 448(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 256(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 256(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 384(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 384(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 320(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 320(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 192(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 192(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 128(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 128(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\"\n");
 		       	if (if_last){
 			       	fprintf(fout, "      \"mfence              \\n\"\n");
@@ -192,21 +192,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 			    fprintf(fout, "      \"rdtsc               \\n\" \n");
 			    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq (%%%rcx),  %%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq (%%%%rcx),  %%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 64(%%%rcx), %%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 64(%%%%rcx), %%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 448(%%%rcx),%%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 448(%%%%rcx),%%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 256(%%%rcx),%%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 256(%%%%rcx),%%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 384(%%%rcx),%%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 384(%%%%rcx),%%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 320(%%%rcx),%%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 320(%%%%rcx),%%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 192(%%%rcx),%%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 192(%%%%rcx),%%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 128(%%%rcx),%%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 128(%%%%rcx),%%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
 	           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -230,21 +230,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			    }
 	           	fprintf(fout, "      \"mfence              \\n\" \n");
-	            fprintf(fout, "      \"movq %%%rcx, (%%%rcx)       \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, (%%%%rcx)       \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 64(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 64(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 448(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 448(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 256(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 256(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 384(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 384(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 320(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 320(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 192(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 192(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 128(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 128(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
 	            if (if_last){
 	           		fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -266,21 +266,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 			    	fprintf(fout, "      \"rdtsc               \\n\" \n");
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 	       			fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, (%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, (%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 64(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 64(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 448(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 448(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 256(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 256(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 384(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 384(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 320(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 320(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 192(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 192(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 128(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 128(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\"\n");
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
 		            fprintf(fout, "      \"subl %%%%esi, %%%%eax         \\n\" \n");
@@ -299,21 +299,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq (%%%rcx),  %%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq (%%%%rcx),  %%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 64(%%%rcx), %%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 64(%%%%rcx), %%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 448(%%%rcx),%%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 448(%%%%rcx),%%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 256(%%%rcx),%%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 256(%%%%rcx),%%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 384(%%%rcx),%%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 384(%%%%rcx),%%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 320(%%%rcx),%%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 320(%%%%rcx),%%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 192(%%%rcx),%%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 192(%%%%rcx),%%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\" \n");
-		        fprintf(fout, "      \"movq 128(%%%rcx),%%%rax     \\n\"\n");
+		        fprintf(fout, "      \"movq 128(%%%%rcx),%%%%rax     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\"\n");
 		        if (if_last){
 			       	fprintf(fout, "      \"mfence              \\n\"\n");
@@ -336,21 +336,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 				    fprintf(fout, "      \"rdtsc               \\n\" \n");
 				    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq (%%%rcx),  %%%rax     \\n\"\n");
+			       	fprintf(fout, "      \"movq (%%%%rcx),  %%%%rax     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq 64(%%%rcx), %%%rax     \\n\"\n");
+			       	fprintf(fout, "      \"movq 64(%%%%rcx), %%%%rax     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq 448(%%%rcx),%%%rax     \\n\"\n");
+			       	fprintf(fout, "      \"movq 448(%%%%rcx),%%%%rax     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq 256(%%%rcx),%%%rax     \\n\"\n");
+			       	fprintf(fout, "      \"movq 256(%%%%rcx),%%%%rax     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq 384(%%%rcx),%%%rax     \\n\"\n");
+			       	fprintf(fout, "      \"movq 384(%%%%rcx),%%%%rax     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq 320(%%%rcx),%%%rax     \\n\"\n");
+			       	fprintf(fout, "      \"movq 320(%%%%rcx),%%%%rax     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq 192(%%%rcx),%%%rax     \\n\"\n");
+			       	fprintf(fout, "      \"movq 192(%%%%rcx),%%%%rax     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq 128(%%%rcx),%%%rax     \\n\"\n");
+			       	fprintf(fout, "      \"movq 128(%%%%rcx),%%%%rax     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\"\n");
 		           	fprintf(fout, "      \"mfence              \\n\"\n");
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -373,21 +373,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 				    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 	           	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 576(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 576(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 768(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 768(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 512(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 512(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 896(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 896(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 704(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 704(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 832(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 832(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 960(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 960(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 640(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 640(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
 	           	if (if_last){
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -409,21 +409,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 				    fprintf(fout, "      \"rdtsc               \\n\" \n");
 				    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 576(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 576(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 768(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 768(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 512(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 512(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 896(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 896(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 704(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 704(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 832(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 832(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 960(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 960(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 640(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 640(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
 		           	fprintf(fout, "      \"mfence              \\n\"\n");
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -443,21 +443,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 576(%%%rcx),  %%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 576(%%%%rcx),  %%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 768(%%%rcx), %%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 768(%%%%rcx), %%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 512(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 512(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 896(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 896(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 704(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 704(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 832(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 832(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 960(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 960(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 640(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 640(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\"\n");
 		       	if (if_last){
 			       	fprintf(fout, "      \"mfence              \\n\"\n");
@@ -480,21 +480,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 				    fprintf(fout, "      \"rdtsc               \\n\" \n");
 				    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq 576(%%%rcx),  %%%rax     \\n\"\n");
+			        fprintf(fout, "      \"movq 576(%%%%rcx),  %%%%rax     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq 768(%%%rcx), %%%rax     \\n\"\n");
+			        fprintf(fout, "      \"movq 768(%%%%rcx), %%%%rax     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq 512(%%%rcx),%%%rax     \\n\"\n");
+			        fprintf(fout, "      \"movq 512(%%%%rcx),%%%%rax     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq 896(%%%rcx),%%%rax     \\n\"\n");
+			        fprintf(fout, "      \"movq 896(%%%%rcx),%%%%rax     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq 704(%%%rcx),%%%rax     \\n\"\n");
+			        fprintf(fout, "      \"movq 704(%%%%rcx),%%%%rax     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq 832(%%%rcx),%%%rax     \\n\"\n");
+			        fprintf(fout, "      \"movq 832(%%%%rcx),%%%%rax     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq 960(%%%rcx),%%%rax     \\n\"\n");
+			        fprintf(fout, "      \"movq 960(%%%%rcx),%%%%rax     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq 640(%%%rcx),%%%rax     \\n\"\n");
+			        fprintf(fout, "      \"movq 640(%%%%rcx),%%%%rax     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\"\n");
 		           	fprintf(fout, "      \"mfence              \\n\"\n");
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -535,21 +535,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 	            fprintf(fout, "      \"mfence              \\n\" \n");
-	            fprintf(fout, "      \"movq %%%rcx, (%%%rcx)       \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, (%%%%rcx)       \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 64(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 64(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 448(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 448(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 256(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 256(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 384(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 384(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 320(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 320(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 192(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 192(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 128(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 128(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
 	            if (if_last){
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -574,21 +574,21 @@ void print_access(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq (%%%rcx),  %%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq (%%%%rcx),  %%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 64(%%%rcx), %%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 64(%%%%rcx), %%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 448(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 448(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 256(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 256(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 384(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 384(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 320(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 320(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 192(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 192(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq 128(%%%rcx),%%%rax     \\n\"\n");
+		       	fprintf(fout, "      \"movq 128(%%%%rcx),%%%%rax     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\"\n");
 		       	if (if_last){
 		       		fprintf(fout, "      \"mfence              \\n\"\n");
@@ -623,21 +623,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			    }
 	            fprintf(fout, "      \"mfence              \\n\" \n");
-	            fprintf(fout, "      \"movq %%%rcx, (%%%rcx)       \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, (%%%%rcx)       \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 64(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 64(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 448(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 448(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 256(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 256(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 384(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 384(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 320(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 320(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 192(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 192(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
-	            fprintf(fout, "      \"movq %%%rcx, 128(%%%rcx)     \\n\"\n");
+	            fprintf(fout, "      \"movq %%%%rcx, 128(%%%%rcx)     \\n\"\n");
 	            fprintf(fout, "      \"mfence              \\n\"\n");
 	            if (if_last){
 	           		fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -659,21 +659,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 			    	fprintf(fout, "      \"rdtsc               \\n\" \n");
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, (%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, (%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 64(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 64(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 448(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 448(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 256(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 256(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 384(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 384(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 320(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 320(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 192(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 192(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\" \n");
-			        fprintf(fout, "      \"movq %%%rcx, 128(%%%rcx)     \\n\"\n");
+			        fprintf(fout, "      \"movq %%%%rcx, 128(%%%%rcx)     \\n\"\n");
 			        fprintf(fout, "      \"mfence              \\n\"\n");
 	           		fprintf(fout, "      \"rdtsc               \\n\" \n");
 	            	fprintf(fout, "      \"subl %%%%esi, %%%%eax         \\n\" \n");
@@ -692,21 +692,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 			   	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush (%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush (%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 64(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 64(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 448(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 448(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 256(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 256(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 384(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 384(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 320(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 320(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 192(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 192(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 128(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 128(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\"\n");
 		       	if (if_last){
 	           		fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -728,21 +728,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 			    	fprintf(fout, "      \"rdtsc               \\n\" \n");
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush (%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush (%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 64(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 64(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 448(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 448(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 256(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 256(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 384(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 384(%%%%rcx)     \\n\"\n");
 				   	fprintf(fout, "      \"mfence              \\n\" \n");
-				   	fprintf(fout, "      \"clflush 320(%%%rcx)     \\n\"\n");
+				   	fprintf(fout, "      \"clflush 320(%%%%rcx)     \\n\"\n");
 				   	fprintf(fout, "      \"mfence              \\n\" \n");
-				   	fprintf(fout, "      \"clflush 192(%%%rcx)     \\n\"\n");
+				   	fprintf(fout, "      \"clflush 192(%%%%rcx)     \\n\"\n");
 				   	fprintf(fout, "      \"mfence              \\n\" \n");
-				   	fprintf(fout, "      \"clflush 128(%%%rcx)     \\n\"\n");
+				   	fprintf(fout, "      \"clflush 128(%%%%rcx)     \\n\"\n");
 				   	fprintf(fout, "      \"mfence              \\n\"\n");
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
 		            fprintf(fout, "      \"subl %%%%esi, %%%%eax         \\n\" \n");
@@ -764,21 +764,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 	           	fprintf(fout, "      \"mfence              \\n\" \n");
-	           	fprintf(fout, "      \"movq %%%rcx, (%%%rcx)       \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, (%%%%rcx)       \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 64(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 64(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 448(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 448(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 256(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 256(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 384(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 384(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 320(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 320(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 192(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 192(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 128(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 128(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
 	           	if (if_last){
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -800,21 +800,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 			    	fprintf(fout, "      \"rdtsc               \\n\" \n");
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, (%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, (%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 64(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 64(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 448(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 448(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 256(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 256(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 384(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 384(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 320(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 320(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 192(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 192(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 128(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 128(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\"\n");
 	           		fprintf(fout, "      \"rdtsc               \\n\" \n");
 	            	fprintf(fout, "      \"subl %%%%esi, %%%%eax         \\n\" \n");
@@ -833,21 +833,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 			   	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush (%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush (%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 64(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 64(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 448(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 448(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 256(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 256(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 384(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 384(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 320(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 320(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 192(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 192(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 128(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 128(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\"\n");
 		       	if (if_last){
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -869,21 +869,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 			    	fprintf(fout, "      \"rdtsc               \\n\" \n");
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush (%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush (%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 64(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 64(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 448(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 448(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 256(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 256(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 384(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 384(%%%%rcx)     \\n\"\n");
 				   	fprintf(fout, "      \"mfence              \\n\" \n");
-				   	fprintf(fout, "      \"clflush 320(%%%rcx)     \\n\"\n");
+				   	fprintf(fout, "      \"clflush 320(%%%%rcx)     \\n\"\n");
 				   	fprintf(fout, "      \"mfence              \\n\" \n");
-				   	fprintf(fout, "      \"clflush 192(%%%rcx)     \\n\"\n");
+				   	fprintf(fout, "      \"clflush 192(%%%%rcx)     \\n\"\n");
 				   	fprintf(fout, "      \"mfence              \\n\" \n");
-				   	fprintf(fout, "      \"clflush 128(%%%rcx)     \\n\"\n");
+				   	fprintf(fout, "      \"clflush 128(%%%%rcx)     \\n\"\n");
 				   	fprintf(fout, "      \"mfence              \\n\"\n");
 	           		fprintf(fout, "      \"rdtsc               \\n\" \n");
 	            	fprintf(fout, "      \"subl %%%%esi, %%%%eax         \\n\" \n");
@@ -906,21 +906,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 				    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 	           	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 576(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 576(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 768(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 768(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 512(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 512(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 896(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 896(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 704(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 704(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 832(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 832(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 960(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 960(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 640(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 640(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\"\n");
 	           	if (if_last){
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -942,21 +942,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 			    	fprintf(fout, "      \"rdtsc               \\n\" \n");
 			    	fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 				   	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 576(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 576(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 768(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 768(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 512(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 512(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 896(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 896(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 704(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 704(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 832(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 832(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 960(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 960(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"movq %%%rcx, 640(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"movq %%%%rcx, 640(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\"\n");
 	           		fprintf(fout, "      \"rdtsc               \\n\" \n");
 	            	fprintf(fout, "      \"subl %%%%esi, %%%%eax         \\n\" \n");
@@ -975,21 +975,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 				    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 			   	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 576(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 576(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 768(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 768(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 512(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 512(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 896(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 896(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 704(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 704(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 832(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 832(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 960(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 960(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 640(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 640(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\"\n");
 		       	if (if_last){
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -1011,21 +1011,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 				    fprintf(fout, "      \"rdtsc               \\n\" \n");
 				    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 				   	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 576(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 576(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 768(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 768(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 512(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 512(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 896(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 896(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 704(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 704(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 832(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 832(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 960(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 960(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\" \n");
-			       	fprintf(fout, "      \"clflush 640(%%%rcx)     \\n\"\n");
+			       	fprintf(fout, "      \"clflush 640(%%%%rcx)     \\n\"\n");
 			       	fprintf(fout, "      \"mfence              \\n\"\n"); 
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
 		            fprintf(fout, "      \"subl %%%%esi, %%%%eax         \\n\" \n");
@@ -1052,21 +1052,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 				    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 	           	fprintf(fout, "      \"mfence              \\n\" \n");
-	           	fprintf(fout, "      \"movq %%%rcx, (%%%rcx)       \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, (%%%%rcx)       \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 64(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 64(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 448(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 448(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 256(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 256(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 384(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 384(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 320(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 320(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 192(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 192(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 128(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 128(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
 	           	if (if_last){
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -1089,21 +1089,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 				    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 	           	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 576(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 576(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 768(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 768(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 512(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 512(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 896(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 896(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 704(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 704(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 832(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 832(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 960(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 960(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"movq %%%rcx, 640(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"movq %%%%rcx, 640(%%%%rcx)     \\n\"\n");
 		        fprintf(fout, "      \"mfence              \\n\"\n");
 	           	if (if_last){
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -1128,21 +1128,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 				    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 			   	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush (%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush (%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 64(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 64(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 448(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 448(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 256(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 256(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 384(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 384(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 320(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 320(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 192(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 192(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 128(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 128(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\"\n");
 		       	if (if_last){
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -1166,21 +1166,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 				    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 	           	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 576(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 576(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 768(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 768(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 512(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 512(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 896(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 896(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 704(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 704(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 832(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 832(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 960(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 960(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 640(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 640(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\"\n"); 
 	           	if (if_last){
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -1222,21 +1222,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 				    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 	           	fprintf(fout, "      \"mfence              \\n\" \n");
-	           	fprintf(fout, "      \"movq %%%rcx, (%%%rcx)       \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, (%%%%rcx)       \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 64(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 64(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 448(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 448(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 256(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 256(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 384(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 384(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 320(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 320(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 192(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 192(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
-	           	fprintf(fout, "      \"movq %%%rcx, 128(%%%rcx)     \\n\"\n");
+	           	fprintf(fout, "      \"movq %%%%rcx, 128(%%%%rcx)     \\n\"\n");
 	           	fprintf(fout, "      \"mfence              \\n\"\n");
 	           	if (if_last){
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -1261,21 +1261,21 @@ void print_flush(int if_write, bool if_unknown, FILE *fout, int miss_hit, int l1
 				    fprintf(fout, "      \"movl %%%%eax, %%%%esi   \\n\" \n");
 			   	}
 			   	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush (%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush (%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 64(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 64(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 448(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 448(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 256(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 256(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 384(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 384(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 320(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 320(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 192(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 192(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\" \n");
-		       	fprintf(fout, "      \"clflush 128(%%%rcx)     \\n\"\n");
+		       	fprintf(fout, "      \"clflush 128(%%%%rcx)     \\n\"\n");
 		       	fprintf(fout, "      \"mfence              \\n\"\n");
 		       	if (if_last){
 		           	fprintf(fout, "      \"rdtsc               \\n\" \n");
@@ -1392,21 +1392,21 @@ void print_eviction_set(FILE *fout, int l1_assoc, int probe_size, int l1_cache_l
 	fprintf(fout, "	  for(int i=0;i<%d*8;i++){  \n", l1_assoc);
 	fprintf(fout, "      asm __volatile__ (\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq (%%%rcx),  %%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq (%%%%rcx),  %%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 64(%%%rcx), %%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 64(%%%%rcx), %%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 448(%%%rcx),%%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 448(%%%%rcx),%%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 256(%%%rcx),%%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 256(%%%%rcx),%%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 384(%%%rcx),%%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 384(%%%%rcx),%%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 320(%%%rcx),%%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 320(%%%%rcx),%%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 192(%%%rcx),%%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 192(%%%%rcx),%%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 128(%%%rcx),%%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 128(%%%%rcx),%%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\"\n");
 	fprintf(fout, "      : \n");
 	fprintf(fout, "      : \"c\" (start[i])\n");
@@ -1416,21 +1416,21 @@ void print_eviction_set(FILE *fout, int l1_assoc, int probe_size, int l1_cache_l
 	fprintf(fout, "	  for(int i=0;i<%d*8;i++){  \n", l1_assoc);
 	fprintf(fout, "      asm __volatile__ (\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 576(%%%rcx),  %%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 576(%%%%rcx),  %%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 768(%%%rcx), %%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 768(%%%%rcx), %%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 512(%%%rcx),%%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 512(%%%%rcx),%%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 896(%%%rcx),%%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 896(%%%%rcx),%%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 704(%%%rcx),%%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 704(%%%%rcx),%%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 832(%%%rcx),%%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 832(%%%%rcx),%%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 960(%%%rcx),%%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 960(%%%%rcx),%%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\" \n");
-	fprintf(fout, "      \"movq 640(%%%rcx),%%%rax     \\n\"\n");
+	fprintf(fout, "      \"movq 640(%%%%rcx),%%%%rax     \\n\"\n");
 	fprintf(fout, "      \"mfence              \\n\"\n");
 	fprintf(fout, "      : \n");
 	fprintf(fout, "      : \"c\" (start[i]+untar_block)\n");
@@ -1501,7 +1501,7 @@ void print_pre(FILE *fout, int l1_cache_size, int l1_assoc, int l1_cache_line, i
 	fprintf(fout, "double arr5[%d*%d]={0};\n", each_run, num_test/2);
 	fprintf(fout, "double arr6[%d*%d]={0};\n", each_run, num_test/2);
 	
-	fprintf(fout, "char **chain_arr;\n");
+	fprintf(fout, "char *chain_arr;\n");
 	fprintf(fout, "volatile pid_t *maintain_arr;\n");
 	fprintf(fout, "\n");
 
@@ -1530,7 +1530,7 @@ void print_pre(FILE *fout, int l1_cache_size, int l1_assoc, int l1_cache_line, i
 	fprintf(fout, "    fmean2 += ARRAY2[x];\n");
 	fprintf(fout, "  }\n");
 	fprintf(fout, "  fmean2 /= ARRAY2_SIZE;\n");
-	fprintf(fout, "//  printf(\"mean1 = %lf mean2 = %lf\\n\", fmean1, fmean2);\n");
+	fprintf(fout, "//  printf(\"mean1 = %%lf mean2 = %%lf\\n\", fmean1, fmean2);\n");
 	fprintf(fout, "  if (fmean1 == fmean2) {\n");
 	fprintf(fout, "    printf(\"the means are equal\\n\");\n");
 	fprintf(fout, "    return 1.0;//if the means are equal, the p-value is 1, leave the function\n");
@@ -1683,7 +1683,7 @@ int find_index(int aa[], int num_elements, int value)
 
 int main(int argc, char const *argv[])
 {
-	char* attack_machine = argv[1];
+	const char* attack_machine = argv[1];
 	int max_cycle = atoi(argv[2]);
 	int l1_cache_size = atoi(argv[3]);
 	int l1_assoc = atoi(argv[4]);
@@ -1905,12 +1905,12 @@ int main(int argc, char const *argv[])
 
 
 
-						char* file_name[50];
-						char* plain[50];
+						char file_name[128];
+						char plain[16];
 						if (if_plain){
 							sprintf(plain, "_plain");
 						} else {
-							sprintf(plain, "");
+							plain[0] = '\0';
 						}
 						sprintf(file_name, "gen_output/%02d_AccOne%d_AccTwo%d_AccThr%d_Aff%d%s_%04d", vul_num_order, access_1, access_2, access_3, affinity_rel, plain, pattern_counter);
 
@@ -2005,13 +2005,13 @@ int main(int argc, char const *argv[])
 						fprintf(fout, "  uint64_t a, b, d, e;\n");
 						fprintf(fout, "\n");
 						fprintf(fout, "  // Map space for shared array\n");
-						fprintf(fout, "  chain_arr = mmap(0, %d*%d*%d*sizeof(char**), PROT_READ|PROT_WRITE,\n", l1_cache_line, l1_assoc, l1_cache_set);
+						fprintf(fout, "  chain_arr = mmap(0, %d*%d*%d*sizeof(char), PROT_READ|PROT_WRITE,\n", l1_cache_line, l1_assoc, l1_cache_set);
 	              		fprintf(fout, "  MAP_SHARED | MAP_ANONYMOUS, -1, 0);\n");
 	  					fprintf(fout, "  if (!chain_arr) {\n");
 	    				fprintf(fout, "  perror(\"mmap failed for chain_arr\");\n");
 	    				fprintf(fout, "  exit(1);\n");
 	  					fprintf(fout, "  }\n");
-	  					fprintf(fout, "  memset((void *)chain_arr, 0, %d*%d*%d*sizeof(char**));\n", l1_cache_line, l1_assoc, l1_cache_set);
+	  					fprintf(fout, "  memset((void *)chain_arr, 0, %d*%d*%d*sizeof(char));\n", l1_cache_line, l1_assoc, l1_cache_set);
 						fprintf(fout, "\n");
 						
 
@@ -2024,8 +2024,8 @@ int main(int argc, char const *argv[])
 		      					fprintf(fout, "  }\n");
 		      					fprintf(fout, "  while(maintain_arr[%d]!=STEP0_RUN)sched_yield();\n", MUTEX_BOUND/2);
 
-								fprintf(fout, "  		tar_block = rand()%4;\n");
-						  	    fprintf(fout, "  		untar_block = rand()%4;\n");
+								fprintf(fout, "  		tar_block = rand()%%4;\n");
+						  	    fprintf(fout, "  		untar_block = rand()%%4;\n");
 								
 
 
@@ -2118,7 +2118,7 @@ int main(int argc, char const *argv[])
 								fprintf(fout, "        maintain_arr[%d]=STEP0_RUN;\n", MUTEX_BOUND/2);
 							}
 
-							void print_timing(if_pre){
+							void print_timing(bool if_pre){
 								if (if_pre){
 									fprintf(fout, "  		} \n");
 								}
@@ -2217,7 +2217,7 @@ int main(int argc, char const *argv[])
                                             fprintf(fout, "     fprintf(fp_res, \"0\");\n");
 									}
 								} else {
-									fprintf(fout, "     //\n", file_name);
+									fprintf(fout, "     //\n");
 									if(skip_case==1){
 										fprintf(fout, "     fprintf(fp_res, \"222\\n\");\n");
 									}

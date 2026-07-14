@@ -35,6 +35,7 @@
 #include <x86intrin.h>
 #include <dlfcn.h>
 #include <sched.h>
+#include <time.h>
 
 
 #define L1_CACHE_SIZE 0x8000 
@@ -95,13 +96,13 @@ char *chain_evict;
 int ratio=((L2_CACHE_SET)/(L1_CACHE_SET));
 
 
-char** probe;
-char* probe_arr[16*L3_CACHE_SIZE];
+char* probe;
+char probe_arr[16*L3_CACHE_SIZE];
 
 int histogram[NUM_CALIBRE][MAX_CYCLE]={0};
 int coarse_histogram[NUM_CALIBRE][MAX_CYCLE/10]={0};
 
-char* start[(L1_ASSOC+L2_ASSOC+2)*(L2_CACHE_SET/L1_CACHE_SET)];//24];
+char* start[320*8+1];
 
 cpu_set_t mycpuset;
 
@@ -195,7 +196,7 @@ int probe_array(char **set, int size, char *candidate){
 
 
 
-unsigned long test_delay(char* start[], char* chain_tar, int sec, int mea_type) {
+unsigned long test_delay(char** start, char* chain_tar, int sec, int mea_type) {
 
   unsigned long t=0;
 
@@ -594,10 +595,10 @@ int main(int argc, char *argv[]) {
         perror("sched_setaffinity");
     }
 
-  char* file_long[50];
+  char file_long[50];
   sprintf(file_long, "histogram_output/histogram_%s.out", argv[1]);
 
-  char* file_name[50];
+  char file_name[50];
   sprintf(file_name, "histogram_output/coarse_histogram_%s.out", argv[1]);
 
 
@@ -619,7 +620,7 @@ int main(int argc, char *argv[]) {
    
   probe = probe_arr;
 
-  for(int i=0;i< L1_ASSOC*L1_CACHE_SET*L1_CACHE_SIZE/8 ;i++){// 8 way cache
+  for(int i=0;i< sizeof(start)/sizeof(start[0]) ;i++){// 8 way cache
     start[i]=&probe[ i*l1_way_size];
   }
 
@@ -781,7 +782,7 @@ int main(int argc, char *argv[]) {
   printf("The average cycle number of 66 types of timings are given below \n");
   for (int j = 0; j < NUM_CALIBRE; ++j)
   	{
-  		printf("%d,", ave_time_cycle_arr[j]);
+  		printf("%lld,", ave_time_cycle_arr[j]);
   	}
   	printf("\n");	
 
