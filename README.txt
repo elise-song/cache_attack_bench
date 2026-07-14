@@ -33,6 +33,7 @@ in the paper.
 
 $ cd PATH_TO_README
 $ ./gen_histogram.sh HIST_INFO
+$ python3 plot_histogram.py 
    
    Add HIST_INFO as the argument for setting the output machine and corresponding 
    information such as the histogram name.
@@ -98,7 +99,7 @@ $vic_num $probe_size $each_run $output_name > /dev/null
    The generated benchmark result for the specific machines will be output to
    folder benchmark_output.
 
-$ python plot_res.py RES_INFO
+$ python3 plot_res.py RES_INFO
    
    Add RES_INFO as the argument for setting the corresponding result information.
    
